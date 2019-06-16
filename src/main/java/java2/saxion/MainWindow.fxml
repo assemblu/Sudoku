@@ -19,7 +19,7 @@
                <HBox.margin>
                   <Insets top="3.0" />
                </HBox.margin></Button>
-            <Button mnemonicParsing="false" text="Button">
+            <Button mnemonicParsing="false" onAction="#submit" text="Submit">
                <HBox.margin>
                   <Insets top="3.0" />
                </HBox.margin></Button>

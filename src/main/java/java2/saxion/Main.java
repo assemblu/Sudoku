@@ -21,7 +21,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-
         FXMLLoader loader = new FXMLLoader(getClass().getResource("MainWindow.fxml"));
         Parent root = loader.load();
 
@@ -34,7 +33,8 @@ public class Main extends Application {
 
 
         primaryStage.setTitle("Sudoku");
-        primaryStage.setScene(new Scene(root, 600, 450));
+        var scene = new Scene(root, 600, 450);
+        primaryStage.setScene(scene);
         primaryStage.show();
         primaryStage.setOnCloseRequest(e -> {
             e.consume();
