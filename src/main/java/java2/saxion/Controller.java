@@ -74,20 +74,19 @@ public class Controller {
 
                     if (sudoku.isValueSuitableToPutThere(i, j, value)) {
                         sudoku.setValue(i, j, value);
+                        cells[i][j].setStyle("-fx-text-fill: green; -fx-font-size: 16px; ");
                         System.out.println("Correct!");
                     }
                 }catch(Exception e){
-                    if(maxCount == 0) WinLose.display("Dude?" , "FIRST FINISH THE GAME MY DUDE!");
-                    maxCount++;
+//                    if(maxCount == 0) WinLose.display("Dude?" , "FIRST FINISH THE GAME MY DUDE!");
+//                    maxCount++;
                     proceed = false;
                 }
             }
         }
 
-        if(sudoku.checkIfFinished() && proceed){
+        if(sudoku.checkIfFinished()){
             WinLose.display("YOU WON", "YOU WON MY DUDE!");
-        }else if(proceed){
-            WinLose.display("YOU LOST", "YOU LOST MY DUDE!");
         }
     }
 
