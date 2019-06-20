@@ -7,12 +7,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import org.w3c.dom.Text;
 
-
 public class Controller {
 
     private Sudoku sudoku;
     private TextField[][] cells;
-    private boolean proceed;
+    private int count;
 
     @FXML
     private GridPane gridPane;
@@ -78,15 +77,15 @@ public class Controller {
                         System.out.println("Correct!");
                     }
                 }catch(Exception e){
-//                    if(maxCount == 0) WinLose.display("Dude?" , "FIRST FINISH THE GAME MY DUDE!");
-//                    maxCount++;
-                    proceed = false;
+                    System.err.println(e);
                 }
             }
         }
 
         if(sudoku.checkIfFinished()){
             WinLose.display("YOU WON", "YOU WON MY DUDE!");
+            sudoku.createPuzzle(10);
+            fillGridCells();
         }
     }
 
@@ -96,5 +95,12 @@ public class Controller {
             fillGridCells();
         }
 
+    }
+
+    public void reset(){
+        if(AreYouSure.display("Dude?", "Are you sure you wanna reset my dude?")){
+            sudoku.createPuzzle(10);
+            fillGridCells();
+        }
     }
 }

@@ -23,7 +23,12 @@
                <HBox.margin>
                   <Insets top="3.0" />
                </HBox.margin></Button>
-            <Region prefHeight="29.0" prefWidth="279.0" />
+            <Button mnemonicParsing="false" onAction="#reset" text="Reset">
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+            </Button>
+            <Region prefHeight="29.0" prefWidth="220.0" />
             <Label text="Super Duper Software B.V." textAlignment="CENTER" textOverrun="CLIP">
                <padding>
                   <Insets top="10.0" />

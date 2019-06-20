@@ -31,6 +31,5 @@ public class WinLose {
         var scene = new Scene(layout);
         window.setScene(scene);
         window.showAndWait();
-
     }
 }
