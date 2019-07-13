@@ -12,9 +12,9 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java2.saxion.Controller">
    <bottom>
-      <HBox prefHeight="29.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="29.0" prefWidth="589.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Region prefHeight="29.0" prefWidth="28.0" />
+            <Region prefHeight="29.0" prefWidth="8.0" />
             <Button mnemonicParsing="false" onAction="#solve" text="Solve">
                <HBox.margin>
                   <Insets top="3.0" />
@@ -28,8 +28,24 @@
                   <Insets top="3.0" />
                </HBox.margin>
             </Button>
-            <Region prefHeight="29.0" prefWidth="220.0" />
-            <Label text="Super Duper Software B.V." textAlignment="CENTER" textOverrun="CLIP">
+            <Region prefHeight="29.0" prefWidth="30.0" />
+            <Button mnemonicParsing="false" onAction="#setDifficultyEasy" text="Easy">
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#setDifficultyMedium" text="Medium">
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#setDifficultyHard" text="Hard">
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+            </Button>
+            <Region prefHeight="29.0" prefWidth="36.0" />
+            <Label text="Maybe Dude Software B.V." textAlignment="CENTER" textOverrun="CLIP">
                <padding>
                   <Insets top="10.0" />
                </padding>

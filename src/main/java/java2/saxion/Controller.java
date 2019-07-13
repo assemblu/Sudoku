@@ -74,7 +74,6 @@ public class Controller {
                     if (sudoku.isValueSuitableToPutThere(i, j, value)) {
                         sudoku.setValue(i, j, value);
                         cells[i][j].setStyle("-fx-text-fill: green; -fx-font-size: 16px; ");
-                        System.out.println("Correct!");
                     }
                 }catch(Exception e){
                     System.err.println(e);
@@ -99,6 +98,27 @@ public class Controller {
 
     public void reset(){
         if(AreYouSure.display("Dude?", "Are you sure you wanna reset my dude?")){
+            sudoku.createPuzzle(10);
+            fillGridCells();
+        }
+    }
+
+    public void setDifficultyEasy(){
+        if(AreYouSure.display("Dude?", "Easy yet fancy!")){
+            sudoku.createPuzzle(3);
+            fillGridCells();
+        }
+    }
+
+    public void setDifficultyMedium(){
+        if(AreYouSure.display("Dude?", "Are you just another average player or what?")){
+            sudoku.createPuzzle(6);
+            fillGridCells();
+        }
+    }
+
+    public void setDifficultyHard(){
+        if(AreYouSure.display("Dude?", "Go hard or go home!")){
             sudoku.createPuzzle(10);
             fillGridCells();
         }
